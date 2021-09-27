@@ -7,6 +7,7 @@ const cors = require('cors');
  * 
  */
 const disciplina = require('./api/disciplina');
+const data = require('./api/data');
 
 
 
@@ -40,6 +41,7 @@ app.use(cors());
  * 
  */
 app.use('/disciplina', disciplina);
+app.use('/data', data);
 
 app.listen(8080, console.log("listening"));
 
