@@ -1,5 +1,4 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 
 const disciplina = require('../database/disciplina');
 
@@ -10,7 +9,7 @@ const disciplina = require('../database/disciplina');
  * 
  */
 router.get('/', async function(req, res){
-    const data = disciplina.getDisciplina();
+    const data = await disciplina.getDisciplina();
     res.json(data);
 })
 
@@ -20,7 +19,7 @@ router.get('/', async function(req, res){
  * 
  */
 router.post('/', async function(req, res){
-    console.log(req.body)
+    console.log("here")
     const found = await disciplina.postDisciplina(req.body);
     console.log(found)
     res.json(found);

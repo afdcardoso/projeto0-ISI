@@ -5,11 +5,11 @@ let disciplina = {};
 
 /**
  * 
- * @returns all LINES of TABLE disciplina
+ * @returns all LINES of TABLE data
  */
-disciplina.getDisciplina = async function(){ 
+disciplina.getData = async function(){
     return new Promise((resolve, reject) => {
-        con.query("SELECT * FROM disciplina", function(err, result){
+        con.query("SELECT * FROM data", function(err, result){
             return resolve(result);
         })
     })
@@ -21,9 +21,9 @@ disciplina.getDisciplina = async function(){
  */
 disciplina.postDisciplina = async function(data){
     return new Promise((resolve, reject) => {
-        con.query("INSERT INTO disciplina (nome) VALUES ('" + data.nome + "');", async function(err, result){
-            //if(err) console.error({err});
-            if(err.code == 'ER_DUP_ENTRY'){return resolve({err: "Duplicate Entry"})}
+        con.query("INSERT INTO data (tipo, data, id_disciplina, descricao) VALUES ('" + data.tipo + "', '" +
+        data.data + "', '" + data.id_disciplina + "', '" + data.descricao + "');", async function(err, result){
+            if(err) throw err;
            return resolve(result);
         })
     })

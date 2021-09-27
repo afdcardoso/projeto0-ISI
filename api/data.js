@@ -1,4 +1,6 @@
 var express = router("express");
 var router = express.Router();
 
-router.getData();
+router.get('/', async function(req, res){
+    res.status(200).send("done");
+})
