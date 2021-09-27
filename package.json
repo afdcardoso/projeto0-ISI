@@ -4,14 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "test": "nodemon index.js"
+>>>>>>> fe41e048de1edb92ab9d8c775641cdae75de554c
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/afdcardoso/projeto0-ISI.git"
   },
+<<<<<<< HEAD
   "author": "André Filipe Dias Cardoso (a18848)",
+=======
+  "author": "André Filipe Dias Cardoso - 18848",
+>>>>>>> fe41e048de1edb92ab9d8c775641cdae75de554c
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/afdcardoso/projeto0-ISI/issues"
@@ -20,9 +28,12 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
+<<<<<<< HEAD
     "mysql": "^2.18.1"
   },
   "devDependencies": {
+=======
+>>>>>>> fe41e048de1edb92ab9d8c775641cdae75de554c
     "express": "^4.17.1",
     "nodemon": "^2.0.13"
   }
